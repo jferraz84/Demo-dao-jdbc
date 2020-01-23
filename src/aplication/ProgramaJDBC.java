@@ -32,7 +32,18 @@ public class ProgramaJDBC {
 			System.out.println(obj);
 			System.out.println("------------------------");
 		}
+	
+		System.out.println("===============================================");
+		System.out.println("===============================================");
 		
+		System.out.println("==== Teste n° 3: seller findByDapartmentId ====");
+		list = sellerDao.findAll();
+		
+		for (Seller obj : list) {
+			System.out.println(obj);
+			System.out.println("------------------------");
+			
+		}
 	}
 
 }
