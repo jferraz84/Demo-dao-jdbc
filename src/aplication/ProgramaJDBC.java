@@ -45,11 +45,17 @@ public class ProgramaJDBC {
 		}
 		
 		System.out.println("===============================================");
-		System.out.println("==== Teste n° 4: seller insert ====");
+		System.out.println("==== Teste n° 4: seller Insert ====");
 		Seller newSeller = new Seller(null , "Jorge", "jferraz@cpqd.com", new Date(), 4000.0, department);
 		sellerDao.insert(newSeller);
 		System.out.println("Inserido! Novo id = " + newSeller.getId());
-		
+	
+		System.out.println("===============================================");
+		System.out.println("==== Teste n° 5: seller Update ====");
+		seller = sellerDao.findById(1);
+		seller.setName("Aline Ferraz");
+		sellerDao.update(seller);
+		System.out.println("Update efetuada! Novo Vendedor " + seller);
 	}
 
 }
