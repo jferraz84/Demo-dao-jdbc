@@ -1,5 +1,6 @@
 package aplication;
 
+import java.util.Date;
 import java.util.List;
 
 import model.dao.DaoFactory;
@@ -22,7 +23,6 @@ public class ProgramaJDBC {
 		System.out.println(seller);
 		
 		System.out.println("===============================================");
-		System.out.println("===============================================");
 		
 		System.out.println("==== Teste n° 2: seller findByDapartmentId ====");
 		Department department = new Department(2, null);
@@ -34,9 +34,8 @@ public class ProgramaJDBC {
 		}
 	
 		System.out.println("===============================================");
-		System.out.println("===============================================");
 		
-		System.out.println("==== Teste n° 3: seller findByDapartmentId ====");
+		System.out.println("==== Teste n° 3: seller findAll ====");
 		list = sellerDao.findAll();
 		
 		for (Seller obj : list) {
@@ -44,6 +43,13 @@ public class ProgramaJDBC {
 			System.out.println("------------------------");
 			
 		}
+		
+		System.out.println("===============================================");
+		System.out.println("==== Teste n° 4: seller insert ====");
+		Seller newSeller = new Seller(null , "Jorge", "jferraz@cpqd.com", new Date(), 4000.0, department);
+		sellerDao.insert(newSeller);
+		System.out.println("Inserido! Novo id = " + newSeller.getId());
+		
 	}
 
 }
