@@ -9,7 +9,7 @@ import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
-public class ProgramaJDBC {
+public class ProgramaTesteSellerDaoJDBC {
 
 	public static void main(String[] args) {
 		
