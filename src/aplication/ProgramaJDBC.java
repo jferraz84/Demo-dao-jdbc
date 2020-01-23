@@ -2,6 +2,7 @@ package aplication;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
@@ -15,6 +16,8 @@ public class ProgramaJDBC {
 		//Department obj = new Department(1, "Books");
 		
 		//Seller sl = new Seller(21,"Jorge", "jferraz@cpqd.com.br", new Date(), 3000.0, obj);
+		
+		Scanner sc = new Scanner(System.in);
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
@@ -56,6 +59,15 @@ public class ProgramaJDBC {
 		seller.setName("Aline Ferraz");
 		sellerDao.update(seller);
 		System.out.println("Update efetuada! Novo Vendedor " + seller);
+		
+		System.out.println("===============================================");
+		System.out.println("==== Teste n° 6: seller Delete ====");
+		System.out.print("Digite um id para ser Deletado: ");
+		int id = sc.nextInt();
+		sellerDao.deleteById(id);
+		System.out.println("Delete executado !");
+		
+		sc.close();
 	}
 
 }
