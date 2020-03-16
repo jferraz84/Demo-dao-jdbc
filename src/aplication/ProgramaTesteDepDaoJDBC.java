@@ -7,6 +7,7 @@ import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
 
+
 public class ProgramaTesteDepDaoJDBC {
 
 	public static void main(String[] args) {
